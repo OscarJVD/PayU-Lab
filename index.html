@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <form action="http://exampledomain.payu.com/processOrder.php" method="post"> -->
+    <button id="pay-button">Pay now</button>
+    <!-- </form> -->
+    <script src="https://secure.payu.com/res/v2/openpayu-2.1.js"></script>
+    <script src="https://secure.payu.com/res/v2/plugin-token-2.1.js"></script>
+
+    <!-- widget-type="cvv"
+     cvv-url="https://secure.payu.com/api/v2/token/token.json?refReqId=c4b31c492b0a5aaa9eb12d07578286a0"
+      cvv-success-callback="cvvSuccess"  -->
+    <script src="https://secure.payu.com/front/widget/js/payu-bootstrap.js" pay-button="#pay-button" merchant-pos-id="952613" shop-name="Solumobil Celulares y Accesorios" total-amount="5000" currency-code="COP" customer-language="es" store-card="false" customer-email="adventurejavis@gmail.com"
+        sig="6c9bb18db84165f53b5918380833723bc5fbb95ec5a9b73a4cb02dd60c11c64e">
+    </script>
+
+    <script>
+        function cvvSuccess() {
+            //display "payment successfully initiated" page
+            console.log('success');
+        }
+    </script>
+</body>
+
+</html>
